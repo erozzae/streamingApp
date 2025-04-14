@@ -1,3 +1,5 @@
+import Input from "@/Components/Input";
+import InputLabel from "@/Components/InputLabel";
 import React from "react";
 
 const Login = () => {
@@ -23,20 +25,18 @@ const Login = () => {
           <form className="w-[370px]">
             <div className="flex flex-col gap-6">
               <div>
-                <label className="text-base block mb-2">Email Address</label>
-                <input
+                <InputLabel forInput="email" value="Email Address"/>
+                <Input
                   type="email"
                   name="email"
-                  className="rounded-2xl bg-form-bg py-[13px] px-7 w-full focus:outline-alerange focus:outline-none"
                   placeholder="Email Address"
                 />
               </div>
               <div>
-                <label className="text-base block mb-2">Password</label>
-                <input
+              <InputLabel forInput="password" value="Password"/>
+                <Input
                   type="password"
                   name="password"
-                  className="rounded-2xl bg-form-bg py-[13px] px-7 w-full focus:outline-alerange focus:outline-none"
                   placeholder="Password"
                 />
               </div>

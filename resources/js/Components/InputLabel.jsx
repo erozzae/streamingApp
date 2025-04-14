@@ -1,4 +1,5 @@
 export default function InputLabel({
+    forInput,
     value,
     className = '',
     children,
@@ -8,7 +9,7 @@ export default function InputLabel({
         <label
             {...props}
             className={
-                `block text-sm font-medium text-gray-700 ` +
+                `text-base block mb-2` +
                 className
             }
         >
