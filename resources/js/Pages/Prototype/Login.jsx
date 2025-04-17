@@ -1,5 +1,7 @@
 import Input from "@/Components/Input";
 import InputLabel from "@/Components/InputLabel";
+import Button from "@/Components/Button";
+import { Link } from "@inertiajs/react";
 import React from "react";
 
 const Login = () => {
@@ -25,35 +27,35 @@ const Login = () => {
           <form className="w-[370px]">
             <div className="flex flex-col gap-6">
               <div>
-                <InputLabel forInput="email" value="Email Address"/>
+                <InputLabel forInput="email" value="Email Address" />
                 <Input
                   type="email"
                   name="email"
                   placeholder="Email Address"
+                  variant=""
                 />
               </div>
               <div>
-              <InputLabel forInput="password" value="Password"/>
-                <Input
-                  type="password"
-                  name="password"
-                  placeholder="Password"
-                />
+                <InputLabel forInput="password" value="Password" />
+                <Input type="password" name="password" placeholder="Password" />
               </div>
             </div>
             <div className="grid space-y-[14px] mt-[30px]">
-              <a
-                href="/"
-                className="rounded-2xl bg-alerange py-[13px] text-center"
-              >
-                <span className="text-base font-semibold">Start Watching</span>
-              </a>
-              <a
-                href="sign_up.html"
-                className="rounded-2xl border border-white py-[13px] text-center"
-              >
-                <span className="text-base text-white">Create New Account</span>
-              </a>
+              <Link href="/">
+                <Button type="button" variant="primary">
+                  <span className="text-base font-semibold">
+                    Start Watching
+                  </span>
+                </Button>
+              </Link>
+
+              <Link href={route('prototype.register')}>
+                <Button type="button" variant="light-outline">
+                  <span className="text-base text-white">
+                    Create New Account
+                  </span>
+                </Button>
+              </Link>
             </div>
           </form>
         </div>
