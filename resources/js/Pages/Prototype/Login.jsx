@@ -32,7 +32,6 @@ const Login = () => {
                   type="email"
                   name="email"
                   placeholder="Email Address"
-                  variant=""
                 />
               </div>
               <div>
