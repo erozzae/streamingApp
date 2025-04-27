@@ -23,11 +23,11 @@ Route::prefix('prototype')->name('prototype.')->group(function (){
     Route::get('/subscription', function () {
         return Inertia::render('Prototype/Subscription');
     })->name('subscription');
-});
 
-// Route::get('/dashboard', function () {
-//     return Inertia::render('Dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
+    Route::get('/movie/{slug}',function(){
+        return Inertia::render('Prototype/Movie/Show');
+    })->name('movie.show');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

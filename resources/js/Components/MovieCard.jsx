@@ -1,3 +1,4 @@
+import { Link } from "@inertiajs/react";
 import PropTypes from "prop-types";
 
 MovieCard.propTypes = {
@@ -7,16 +8,11 @@ MovieCard.propTypes = {
   thumbnail: PropTypes.string.isRequired,
 };
 
-export default function MovieCard({
-  slug,
-  name,
-  category,
-  thumbnail,
-}) {
+export default function MovieCard({ slug, name, category, thumbnail }) {
   return (
     <div className="relative group overflow-hidden mr-[30px]">
       <img
-       src={thumbnail}
+        src={thumbnail}
         className="object-cover rounded-[30px] h-[340px] w-[250px]"
         alt=""
       />
@@ -32,7 +28,10 @@ export default function MovieCard({
       >
         <img src="/assets/icons/ic_play.svg" className="" width="50" alt="" />
       </div>
-      <a href={slug} className="inset-0 absolute z-50"></a>
+      <Link
+        href={route("prototype.movie.show", slug)}
+        className="inset-0 absolute z-50"
+      ></Link>
     </div>
   );
 }
