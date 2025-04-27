@@ -28,7 +28,10 @@ export default function SubscriptionCard({
           {/* Mid Content: Benefits  */}
           <div className="flex flex-col gap-4">
             {features.map((feature, index) => (
-              <div key={`${index}-${id}-${features}`} className="flex items-center gap-2">
+              <div
+                key={`${index}-${id}-${feature}`}
+                className="flex items-center gap-2"
+              >
                 <img src="/assets/icons/ic_tick.svg" alt="" />
                 <span className="text-sm">{feature}</span>
               </div>
@@ -37,8 +40,7 @@ export default function SubscriptionCard({
 
           {/* Bottom: CTA Button  */}
           <div onClick={onSelectSubscription}>
-            <Button type="button" variant="white-outline"
-            >
+            <Button type="button" variant="white-outline">
               <span className="text-base">Start Basic</span>
             </Button>
           </div>
@@ -66,7 +68,10 @@ export default function SubscriptionCard({
           {/* Mid Content: Benefits */}
           <div className="flex flex-col gap-4">
             {features.map((feature, index) => (
-              <div key={`${index}-${id}-${features}`} className="flex items-center gap-2">
+              <div
+                key={`${index}-${id}-${feature}`}
+                className="flex items-center gap-2"
+              >
                 <svg
                   width="24"
                   height="24"
@@ -96,11 +101,8 @@ export default function SubscriptionCard({
           </div>
 
           {/* Bottom: CTA Button */}
-          <div>
-            <Button
-              type="button"
-              variant="primary"
-            >
+          <div onClick={onSelectSubscription}>
+            <Button type="button" variant="primary">
               <span className="text-base font-semibold">Subscribe Now</span>
             </Button>
           </div>
